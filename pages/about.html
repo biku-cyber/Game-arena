@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Architecture — Game Arena Pro</title>
+  <style>
+    :root {
+      --gold: #d9a441;
+      --gold-soft: #f0c870;
+      --bg: #1a0f08;
+      --surface: #271810;
+      --surface-2: #3a2418;
+      --border: #5a3a22;
+      --text: #f4e9d6;
+      --text-soft: #c9b48a;
+      --font-display: 'Cinzel', 'Georgia', serif;
+      --font-body: 'Inter', 'Segoe UI', sans-serif;
+    }
+    body {
+      background: radial-gradient(ellipse at top, #3a2418 0%, var(--bg) 80%), var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container { max-width: 800px; margin: 0 auto; background: var(--surface); padding: 40px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(0,0,0,.6); }
+    h1, h2 { font-family: var(--font-display); color: var(--gold-soft); margin-top: 0; }
+    h1 { border-bottom: 2px solid var(--border); padding-bottom: 12px; font-size: 28px; letter-spacing: 1px; }
+    h2 { font-size: 20px; margin-top: 30px; color: var(--gold); }
+    p { color: var(--text-soft); font-size: 15px; }
+    .tech-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+    .stack-card { background: var(--surface-2); border: 1px solid var(--border); padding: 16px; border-radius: 8px; }
+    .stack-card h3 { margin: 0 0 8px 0; font-family: var(--font-display); color: var(--gold); font-size: 14px; }
+    .badge { display: inline-block; background: var(--border); color: var(--gold-soft); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>System Architecture Specifications</h1>
+    <p>Welcome to the core documentation panel of the <strong>Game Arena Pro</strong> ecosystem (v2.0.0 Stable). This architecture transitions standard monolithic procedural logic into an extensible, decoupled runtime interface driver.</p>
+    
+    <h2>1. Decoupled Core Hub Architecture</h2>
+    <p>The system operates on an abstract hub framework. Individual game configurations drop into place as isolated modules containing state initialization vectors, input observation pipelines, and termination diagnostics. The parent frame unifies audio rendering pipelines, localStorage state tables, and visual transitions without directly executing internal game subroutines.</p>
+    
+    <h2>2. Mathematical Sub-Engine Blueprints</h2>
+    <div class="tech-stack">
+      <div class="stack-card">
+        <h3>Sliding Matrix</h3>
+        <span class="badge">Linear Vector Array</span>
+        <p>Utilizes dynamic inversion calculations to guarantee puzzle solvability, mapping spatial tracking through fluid translation coordinate transforms.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Minimax Heuristics</h3>
+        <span class="badge">Recursive Tree Alpha-Beta</span>
+        <p>A zero-sum matrix scoring structure evaluates operational pathways to construct automated responsive decisions in the Tic-Tac-Toe module.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Fluid Dynamics</h3>
+        <span class="badge">Stack Node Segmentation</span>
+        <p>Executes structural push/pop array operations to manage liquid density columns inside glass vectors, calculating volumetric limits.</p>
+      </div>
+    </div>
+
+    <h2>3. Offline Cache Mechanics</h2>
+    <p>Engineered with an aggressive Progressive Web App cache architecture via its persistent Service Worker. System cache validation guarantees sub-millisecond execution capabilities without an active network pathway, ensuring total analytical computational parity completely offline.</p>
+  </div>
+</body>
+</html>
+
