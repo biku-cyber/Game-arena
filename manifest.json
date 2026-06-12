@@ -1,0 +1,15 @@
+{
+  "name": "Number Puzzle Pro Game Arena",
+  "short_name": "Game Arena",
+  "description": "A premium collection of high-fidelity logical games featuring Sliding Puzzles, AI Tic-Tac-Toe, and Liquid Color Mixing.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a0f08",
+  "theme_color": "#1a0f08",
+  "icons": [
+    { "src": "assets/icons/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icons/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
