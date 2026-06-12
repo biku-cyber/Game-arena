@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+
+  <meta name="theme-color" content="#1a0f08" />
+
+  <meta name="description" content="Premium Game Arena — A luxury selection of logical mental games." />
+
+  <title>Game Arena Pro</title>
+
+  <link rel="manifest" href="manifest.json" />
+
+  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+
+  <link rel="apple-touch-icon" href="assets/icons/logo.png" />
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body class="theme-dark">
+
+
+<!-- LOADING SCREEN -->
+
+<div id="loading-screen" class="loader">
+
+  <div class="loader-content">
+
+    <div class="loader-wrapper">
+
+      <div class="loader-ring"></div>
+
+      <img src="assets/icons/logo.png" alt="Game Arena Pro" class="loader-logo" />
+
+    </div>
+
+    <p>Loading Game Arena Masterpiece...</p>
+
+  </div>
+
+  <div class="loader-footer"><p>Created by Vikas</p></div>
+
+</div>
+
+
+<!-- MAIN VIEW LAYER -->
+
+<div id="app" class="app hidden">
+
+
+  <!-- GLOBAL CONTROL DRAWER SYSTEM -->
+
+  <aside id="info-panel" class="side-panel side-panel-left" aria-label="Information">
+
+    <header class="panel-header">
+
+      <h2>Information Suite</h2>
+
+      <button class="icon-btn" data-close-panel="info-panel" aria-label="Close">✕</button>
+
+    </header>
+
+    <nav class="panel-list">
+
+      <a href="pages/about.html" target="_blank" rel="noopener"><span>About App Architecture</span></a>
+
+      <a href="pages/guide.html" target="_blank" rel="noopener"><span>Comprehensive Playbooks</span></a>
+
+      <a href="pages/privacy.html" target="_blank" rel="noopener"><span>Privacy Regulations</span></a>
+
+      <div class="panel-meta">
+
+        <p><strong>System Core Engine:</strong> v2.0.0 Stable</p>
+
+      </div>
+
+      <div class="panel-actions">
+
+        <button class="btn btn-ghost" id="btn-export-data">Export System Save</button>
+
+        <button class="btn btn-ghost" id="btn-import-data">Import System Save</button>
+
+        <input type="file" id="import-file" accept="application/json" hidden />
+
+        <button class="btn btn-danger" id="btn-reset-data">Hard Wipe Storage</button>
+
+      </div>
+
+    </nav>
+
+  </aside>
+
+
+  <aside id="dashboard-panel" class="side-panel side-panel-right" aria-label="Analytics Dashboard">
+
+    <header class="panel-header">
+
+      <h2>Performance Analytics</h2>
+
+      <button class="icon-btn" data-close-panel="dashboard-panel" aria-label="Close">✕</button>
+
+    </header>
+
+    <div class="panel-body" id="dashboard-body"></div>
+
+  </aside>
+
+
+  <div id="panel-backdrop" class="panel-backdrop"></div>
+
+
+  <!-- SCREEN 1: THE ARENA HUB -->
+
+  <section id="screen-hub" class="screen active">
+
+    <header class="topbar">
+
+      <button class="icon-btn" id="open-info" aria-label="Open Info Suite">☰</button>
+
+      <div class="brand"><h1>Game Arena <span>PRO</span></h1></div>
+
+      <button class="icon-btn" id="open-dashboard" aria-label="Open Diagnostics">📊</button>
+
+    </header>
+
+    <main class="hub-main">
+
+      <h2 class="section-title">Select Architectural Challenge</h2>
+
+      <div class="hub-grid">
+
+        <div class="game-card active" data-game-id="sliding">
+
+          <div class="card-art">🧩</div>
+
+          <h3>Sliding Matrix Blocks</h3>
+
+          <p>Reorder scrambled linear indices or target images via empty vector allocations.</p>
+
+        </div>
+
+        <div class="game-card" data-game-id="tictactoe">
+
+          <div class="card-art">❌</div>
+
+          <h3>Tic-Tac-Toe Minimax</h3>
+
+          <p>Match operational vectors against a continuous recursive heuristic engine.</p>
+
+        </div>
+
+        <div class="game-card" data-game-id="colorglass">
+
+          <div class="card-art">🧪</div>
+
+          <h3>Color Fluid Segregation</h3>
+
+          <p>Isolate stacked liquid fluid layers inside structural glass containers.</p>
+
+        </div>
+
+      </div>
+
+      
+
+      <!-- DYNAMIC SETTINGS CONTEXT BLOCK -->
+
+      <div class="settings-engine-container">
+
+        <h3 class="settings-title">Configuration Parameters</h3>
+
+        <div id="dynamic-settings-pane"><!-- Injected Dynamically by System Core Engine --></div>
+
+      </div>
+
+      
+
+      <div class="hub-cta-container">
+
+        <button class="btn btn-primary btn-large w-100" id="btn-initialize-game">Initialize System Engine</button>
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+  <!-- SCREEN 2: STANDALONE ENGINE SANDBOX VIEW -->
+
+  <section id="screen-game" class="screen">
+
+    <header class="topbar game-topbar">
+
+      <button class="icon-btn" id="btn-abort-game" aria-label="Kill Runtime">🏠</button>
+
+      <div class="hud">
+
+        <div class="hud-cell"><span class="hud-label" id="label-hud-metric-a">Metric A</span><span class="hud-value" id="val-hud-metric-a">0</span></div>
+
+        <div class="hud-cell"><span class="hud-label" id="label-hud-metric-b">Metric B</span><span class="hud-value" id="val-hud-metric-b">00:00</span></div>
+
+      </div>
+
+      <button class="icon-btn" id="btn-halt-runtime" aria-label="Pause Thread">⏸</button>
+
+    </header>
+
+    <main class="game-main">
+
+      <div id="board-stage" class="board-stage">
+
+        <!-- RENDER GRAPHIC CANVAS / NODE BOARD CONTEXT -->
+
+        <div id="board" class="board" tabindex="0"></div>
+
+      </div>
+
+      <div id="dynamic-game-controls" class="game-controls"></div>
+
+    </main>
+
+  </section>
+
+
+  <!-- APP OVERLAYS AND RUNTIME SYSTEMS -->
+
+  <div id="pause-overlay" class="modal hidden">
+
+    <div class="modal-card">
+
+      <h2>Thread Suspended</h2>
+
+      <p>Data tables safely held inside runtime registers.</p>
+
+      <div class="modal-actions">
+
+        <button class="btn btn-primary w-100" id="btn-resume-runtime">Resume Context</button>
+
+        <button class="btn btn-danger w-100" id="btn-kill-runtime">Terminate Execution</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div id="confirm-dialog" class="modal hidden">
+
+    <div class="modal-card">
+
+      <h3 id="confirm-title">Critical Confirmation Required</h3>
+
+      <p id="confirm-message">Confirm current operation memory overwrite?</p>
+
+      <div class="modal-actions">
+
+        <button class="btn btn-ghost" id="confirm-cancel">Abort Action</button>
+
+        <button class="btn btn-danger" id="confirm-ok">Authorize Action</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section id="screen-result" class="screen screen-result">
+
+    <div class="result-backdrop">
+
+      <div class="blast-flash"></div>
+
+      <div class="shockwave-ring ring-1"></div>
+
+    </div>
+
+    <div class="result-card">
+
+      <div class="trophy-stage">
+
+        <div class="epic-aura"></div>
+
+        <div class="trophy-surrogate">👑</div>
+
+      </div>
+
+      <h2 class="congrats">Objective Fulfilled</h2>
+
+      <p class="subtitle">Heuristics resolved successfully.</p>
+
+      <div class="result-grid" id="result-metrics-grid"></div>
+
+      <div class="modal-actions">
+
+        <button class="btn btn-primary" id="btn-result-cycle">Re-initialize Blueprint</button>
+
+        <button class="btn btn-ghost" id="btn-result-hub">Return To Hub</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+
+</div>
+
+<script src="script.js" defer></script>
+
+</body>
+
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
